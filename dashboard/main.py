@@ -4,6 +4,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pickle
+import os
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import SMOTE
@@ -11,7 +12,11 @@ from imblearn.over_sampling import SMOTE
 
 
 # Load model dan scaler
-def load_model_and_scaler(model_path=r"dashboard\fa_svm_model.pkl", scaler_path=r"dashboard\scaler.pkl"):
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def load_model_and_scaler(model_name="fa_svm_model.pkl", scaler_name="scaler.pkl"):
+    model_path = os.path.join(BASE_DIR, model_name)
+    scaler_path = os.path.join(BASE_DIR, scaler_name)
     with open(model_path, "rb") as model_file, open(scaler_path, "rb") as scaler_file:
         model = pickle.load(model_file)
         scaler = pickle.load(scaler_file)
