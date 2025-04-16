@@ -1,8 +1,7 @@
-imbalanced-learn==0.13.0
-matplotlib==3.8.3
-numpy==1.26.4
-pandas==2.2.1
-pickleshare==0.7.5
-scikit-learn==1.6.1
-seaborn==0.13.2
-streamlit==1.31.1
+imbalanced-learn
+matplotlib
+numpy
+pandas
+scikit-learn
+seaborn
+streamlit
