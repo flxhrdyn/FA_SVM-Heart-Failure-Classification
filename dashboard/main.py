@@ -11,7 +11,7 @@ from imblearn.over_sampling import SMOTE
 
 
 # Load model dan scaler
-def load_model_and_scaler(model_path="fa_svm_model.pkl", scaler_path="scaler.pkl"):
+def load_model_and_scaler(model_path="dashboard\fa_svm_model.pkl", scaler_path="dashboard\scaler.pkl"):
     with open(model_path, "rb") as model_file, open(scaler_path, "rb") as scaler_file:
         model = pickle.load(model_file)
         scaler = pickle.load(scaler_file)
